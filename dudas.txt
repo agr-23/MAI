@@ -1,3 +1,0 @@
-- En el archivo de 'Pasajeros Aranjuez' con 50k, no hay un atributo de id_vehiculo
-- Si sería posible, que nos dieran un archivo con la línea limpia de las rutas
-- En el archivo de 'Transportes Aranjuez' cuál es la diferencia entre el dato de idruta y codigoruta
