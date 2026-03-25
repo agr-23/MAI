@@ -142,24 +142,24 @@ def main():
         subprocess.check_call(["pip", "install", "geopandas"])
         import geopandas as gpd
 
-    print("Cargando paraderos Aranjuez Santa Cruz...")
-    gdf = gpd.read_file(PARADEROS_SHP).to_crs("EPSG:4326")
-    paradas_list = []
-    for _, row in gdf.iterrows():
-        geom = row.geometry
-        if geom is None or geom.is_empty:
-            continue
-        lon, lat = geom.x, geom.y
-        paradas_list.append({
-            "latitud": lat, "longitud": lon,
-            "id_paradero": row.get("ID_PARADER"),
-            "direccion": row.get("DIRECCION", ""),
-            "codigo_ruta": str(row.get("CODIGO_RUT", "")),
-            "nombre_ruta": str(row.get("NOMBRE_RUT", "")),
-            "recorrido": str(row.get("RECORRIDO", "")),
-            "nro_parada": row.get("NRO_PARADA", ""),
-        })
-    print(f"  Paraderos totales: {len(paradas_list)}")
+    # print("Cargando paraderos Aranjuez Santa Cruz...")
+    # gdf = gpd.read_file(PARADEROS_SHP).to_crs("EPSG:4326")
+    # paradas_list = []
+    # for _, row in gdf.iterrows():
+    #     geom = row.geometry
+    #     if geom is None or geom.is_empty:
+    #         continue
+    #     lon, lat = geom.x, geom.y
+    #     paradas_list.append({
+    #         "latitud": lat, "longitud": lon,
+    #         "id_paradero": row.get("ID_PARADER"),
+    #         "direccion": row.get("DIRECCION", ""),
+    #         "codigo_ruta": str(row.get("CODIGO_RUT", "")),
+    #         "nombre_ruta": str(row.get("NOMBRE_RUT", "")),
+    #         "recorrido": str(row.get("RECORRIDO", "")),
+    #         "nro_parada": row.get("NRO_PARADA", ""),
+    #     })
+    # print(f"  Paraderos totales: {len(paradas_list)}")
 
     print("Cargando red peatonal...")
     tramos_peatonal = cargar_tramos_shp(RED_PEATONAL_SHP)
@@ -188,26 +188,26 @@ def main():
             linea_ruta.append(seg[1])
 
         # Paraderos Aranjuez cercanos a la ruta (solo suaves -6° a 6°)
-        paradas_cercanas = []
-        seen = set()
-        for p in paradas_list:
-            p_copy = p.copy()
-            lat, lon = p_copy["latitud"], p_copy["longitud"]
-            dist, idx_seg = distancia_y_segmento_cercano(lat, lon, segmentos_con_incl)
-            if dist <= DISTANCIA_PARADAS_M:
-                incl_seg = segmentos_con_incl[idx_seg][1]
-                if -6 <= incl_seg < 6:  # Solo paradas suaves
-                    key = (round(lat, 5), round(lon, 5))
-                    if key not in seen:
-                        seen.add(key)
-                        p_copy["distancia_metros"] = round(dist, 1)
-                        p_copy["inclinacion_segmento"] = incl_seg
-                        paradas_cercanas.append(p_copy)
+        # paradas_cercanas = []
+        # seen = set()
+        # for p in paradas_list:
+        #     p_copy = p.copy()
+        #     lat, lon = p_copy["latitud"], p_copy["longitud"]
+        #     dist, idx_seg = distancia_y_segmento_cercano(lat, lon, segmentos_con_incl)
+        #     if dist <= DISTANCIA_PARADAS_M:
+        #         incl_seg = segmentos_con_incl[idx_seg][1]
+        #         if -6 <= incl_seg < 6:  # Solo paradas suaves
+        #             key = (round(lat, 5), round(lon, 5))
+        #             if key not in seen:
+        #                 seen.add(key)
+        #                 p_copy["distancia_metros"] = round(dist, 1)
+        #                 p_copy["inclinacion_segmento"] = incl_seg
+        #                 paradas_cercanas.append(p_copy)
 
         paradas_suaves = pd.DataFrame(paradas_cercanas)
-        if paradas_suaves.empty:
-            print(f"  Ruta {codigo}: Sin paraderos Aranjuez en tramos suaves.")
-            continue
+        # if paradas_suaves.empty:
+        #     print(f"  Ruta {codigo}: Sin paraderos Aranjuez en tramos suaves.")
+        #     continue
 
         # Tramos peatonal cercanos a la ruta
         peatonal_cercana = []
