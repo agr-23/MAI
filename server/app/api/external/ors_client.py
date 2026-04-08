@@ -13,7 +13,6 @@ async def fetch_ors_route(
     token: str,
     coords: List[Tuple[float, float]],
     steps: bool,
-    geometries: str,
 ) -> Dict[str, Any]:
     """Request a route from ORS and return the first (best) feature dict."""
     headers = {"Authorization": token, "Content-Type": "application/json"}
@@ -21,7 +20,7 @@ async def fetch_ors_route(
     payload: Dict[str, Any] = {
         "coordinates": coords,
         "instructions": steps,
-        "geometry": geometries == "geojson",
+        "geometry": True,
     }
 
     url = "https://api.openrouteservice.org/v2/directions/driving-car/geojson"
@@ -45,13 +44,6 @@ async def fetch_ors_route(
         return {"geometry": {"type": "LineString", "coordinates": []}, "summary": {}, "alternatives": []}
 
     principal = feats[0]
-
-    # Persist last raw response for debugging
-    try:
-        with open("resources/examples/petition_raw_ors.json", "w") as f:
-            json.dump(principal, f, indent=2)
-    except Exception:
-        pass
 
     return principal
 

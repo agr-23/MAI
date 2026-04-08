@@ -12,6 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.api.routers.datos_router import router as datos_router
 from app.api.routers.bus_router import router as bus_router
+from app.api.routers.usuario_router import router as usuario_router
 
 app = FastAPI(
     title="Aplicación de Movilidad",
@@ -31,3 +32,4 @@ app.add_middleware(
 
 app.include_router(datos_router)
 app.include_router(bus_router)
+app.include_router(usuario_router)

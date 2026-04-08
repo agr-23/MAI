@@ -7,15 +7,15 @@ import json
 
 router = APIRouter(tags=["datos"])
 
-df_paraderos = pd.read_csv("data/paraderos/ruta_041_paradas_suaves_coords.csv")
-paraderos_cache = df_paraderos.to_dict(orient="list")
+with open("data/paraderos/paraderos.json","r") as f:
+    paraderos_cache = json.load(f)
 
 with open("data/rutas/rutas.json","r") as f:
     rutas = json.load(f)
 
 
 @router.get("/paraderos")
-async def paraderos():
+def get_paraderos():
     """
         Returns a list of stops across the route 041
         (dict){
@@ -28,7 +28,7 @@ async def paraderos():
     return paraderos_cache
 
 @router.get("/ruta")
-async def ruta():
+def ruta():
     """
         Returns the polyline for the route 041
         (dict){
@@ -43,7 +43,7 @@ async def ruta():
             }
 
 @router.get("/rutas")
-async def ruta():
+def rutas():
     """
         Returns the polyline for the route 041
         (dict){
@@ -56,7 +56,7 @@ async def ruta():
     return rutas
 
 @router.get("/ciclorrutas")
-async def ciclorrutas():
+def ciclorrutas():
     """
         Returns the polyline for the route 041
         (dict){
@@ -69,7 +69,7 @@ async def ciclorrutas():
     return ciclorrutas
 
 @router.get("/red_peatonal")
-async def red_peatonal():
+def red_peatonal():
     """
         Returns the polyline for the pedestrian sidewalks
         (dict){
