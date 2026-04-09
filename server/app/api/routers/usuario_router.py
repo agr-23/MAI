@@ -16,19 +16,22 @@ async def get_near_paradero(location:coords):
     if not paraderos:
         raise HTTPException(status_code=500, detail="Paraderos not found")
 
-    destino = [paraderos[0]["lon"], paraderos[0]["lat"]]
-    origen = [location.longitude, location.latitude]
+    origen_lat = location.latitude
+    origen_lon = location.longitude
+    destino_lat = paraderos[0]["lat"]
+    destino_lon = paraderos[0]["lon"]
 
     for paradero in paraderos:
-        dist1 = haversine_km(lat1=origen[0],lon1=origen[1],
-                             lat2=destino[0],lon2=destino[1])
-        
-        dist2 = haversine_km(lat1=origen[0],lon1=origen[1],
-                             lat2=paradero["lat"],lon2=paradero["lon"])
-        if dist1 > dist2:
-            destino = [paradero["lon"], paradero["lat"]]
+        dist1 = haversine_km(lat1=origen_lat, lon1=origen_lon,
+                             lat2=destino_lat, lon2=destino_lon)
+        dist2 = haversine_km(lat1=origen_lat, lon1=origen_lon,
+                             lat2=paradero["lat"], lon2=paradero["lon"])
+        if dist2 < dist1:
+            destino_lat = paradero["lat"]
+            destino_lon = paradero["lon"]
 
-    coords = [origen, destino]
+    # ORS espera coordenadas en orden [lon, lat]
+    coords = [[origen_lon, origen_lat], [destino_lon, destino_lat]]
     async with httpx.AsyncClient(timeout=30) as client:
         try:
             r = await fetch_ors_route(
