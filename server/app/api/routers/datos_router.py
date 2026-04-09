@@ -11,7 +11,7 @@ with open("data/paraderos/paraderos.json","r") as f:
     paraderos_cache = json.load(f)
 
 with open("data/rutas/rutas.json","r") as f:
-    rutas = json.load(f)
+    rutas_data = json.load(f)
 
 
 @router.get("/paraderos")
@@ -39,7 +39,7 @@ def ruta():
         }
     """
     return {
-                "041":rutas["041"]
+                "041":rutas_data["041"]
             }
 
 @router.get("/rutas")
@@ -53,7 +53,7 @@ def rutas():
 
         }
     """
-    return rutas
+    return rutas_data
 
 @router.get("/ciclorrutas")
 def ciclorrutas():
@@ -65,8 +65,8 @@ def ciclorrutas():
         }
     """
     with open("data/otros/ciclorutas_coords.json","r") as f:
-        ciclorrutas = json.load(f)
-    return ciclorrutas
+        ciclorrutas_data = json.load(f)
+    return ciclorrutas_data
 
 @router.get("/red_peatonal")
 def red_peatonal():
