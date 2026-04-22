@@ -7,12 +7,11 @@ import json
 
 router = APIRouter(tags=["datos"])
 
-with open("data/paraderos/paraderos.json","r") as f:
+with open("data/otros/paraderos.json","r") as f:
     paraderos_cache = json.load(f)
 
 with open("data/rutas/rutas.json","r") as f:
     rutas_data = json.load(f)
-
 
 @router.get("/paraderos")
 def get_paraderos():
@@ -80,3 +79,16 @@ def red_peatonal():
     with open("data/otros/red_peatonal_coords.json","r") as f:
         peatonal = json.load(f)
     return peatonal
+
+@router.get("/semaforos")
+def semaforos():
+    """
+        Returns the polyline for the pedestrian sidewalks
+        (dict){
+            "coords":[[]], ... list of lists containing polylines
+
+        }
+    """
+    with open("data/otros/semaforos_041.json","r") as f:
+        semaforos = json.load(f)
+    return semaforos

@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException
 
 from app.api.external.ors_client import fetch_ors_route
 from app.api.routers.datos_router import paraderos_cache
-from app.models.schemas import coords
+from app.models.schemas import waypoint
 from app.core.config import settings
 from app.utils.functions import haversine_km
 
@@ -12,7 +12,7 @@ router = APIRouter(tags=["user"])
 paraderos = paraderos_cache
 
 @router.post("/near_paradero")
-async def get_near_paradero(location:coords):
+async def get_near_paradero(location:waypoint):
     if not paraderos:
         raise HTTPException(status_code=500, detail="Paraderos not found")
 

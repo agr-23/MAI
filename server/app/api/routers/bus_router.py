@@ -1,30 +1,48 @@
 from fastapi import APIRouter, HTTPException
+from app.models.schemas import paradero
 
 import pandas as pd
 import json
-import random
+from sklearn.neighbors import BallTree
+import numpy as np
 
 router = APIRouter(tags=["paraderos"])
 
-with open("data/rutas/rutas.json","r") as f:
-    ruta = json.load(f)["041"]
+# Read and cast historic data
+historic = pd.read_csv("data/rutas/clean_historycal.csv")
+historic["horaregistro"] = pd.to_datetime(historic["horaregistro"])
 
-@router.get("/buses_proximos")
-async def buses_proximos(paradero:str):
-    placas = ['EQS782', 'TSZ911', 'EQS783', 'EQS970', 'EQT626', 'WMQ124',
-       'EQR887', 'WMR092', 'EQW266', 'EQT786', 'WMQ211', 'EQT067',
-       'FWK922', 'EQT960', 'SMV024', 'EQT153', 'FWK060', 'EQS704',
-       'EQT572', 'WMQ475', 'EQT152', 'STV889', 'FWK726', 'EQT896',
-       'FWL396', 'EQT038', 'FWL282', 'WMQ199', 'FWK874', 'WMQ799',
-       'FVY459', 'WMQ800']
+ruta_coords_rad = np.radians(ruta_df[["lat", "lon"]].values)
+    
+# Data structure for log(n) geospatial queries
+tree = BallTree(ruta_coords_rad, metric="haversine")
 
-    buses = random.sample(placas, k=3)
-    tiempos = sorted(random.sample(range(1,20,2), k=3))
-    ubicaciones = random.sample(ruta, k=3)
+EARTH_RADIUS_M = 6_371_000  # meters
+
+@router.post("/buses_proximos")
+async def buses_proximos(paradero: paradero):
+    current_hour = pd.to_datetime(pd.Timestamp.now()).hour
+
+    historic_hour_filtered = historic[historic.
+                            horaregistro.dt.components.hours.
+                            between(current_hour - 2,current_hour)]
+
+    fecha_most_records = historic_hour_filtered["fecha"].value_counts().idxmax()
+
+    historic_hour_filtered = historic_hour_filtered[historic_hour_filtered["fecha"] == fecha_most_records]
+
+    coord = np.radians([[paradero.waypoint.latitude, paraderowaypoint.longitude]])
+
+    distances, indices = tree.query(coord, k=3)
+
+    nearest_buses = historic.iloc[indices[0]]
+
+    # Pasar distancias a distancia euclidiana, y dividir sobre 60 km/h en promedio, para obtener distancia aproximada
+    times = (distances[0] * EARTH_RADIUS_M) / 16.6
 
     return {
-        "paradero":paradero,
-        "buses_proximos":buses,
-        "tiempos":tiempos,
-        "ubicaciones":ubicaciones
+        "paradero":paradero.ubicacion,
+        "buses_proximos":nearest_buses.placavehiculo.unique().tolist(),
+        "tiempos":times.tolist(),
+        "ubicaciones":nearest_buses[["latitud","longitud"]].to_dict(orient="records")
     }

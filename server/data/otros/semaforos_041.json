@@ -1,0 +1,282 @@
+[
+  {
+    "id": "sem_143",
+    "latitude": 6.276051,
+    "longitude": -75.55248,
+    "address": "CR 44  CL 84",
+    "progressM": 1894.2
+  },
+  {
+    "id": "sem_167",
+    "latitude": 6.276218,
+    "longitude": -75.553522,
+    "address": "CR 45  CL 84",
+    "progressM": 2010.5
+  },
+  {
+    "id": "sem_188",
+    "latitude": 6.276333,
+    "longitude": -75.554536,
+    "address": "CR 46  CL 84",
+    "progressM": 2118.4
+  },
+  {
+    "id": "sem_187",
+    "latitude": 6.272968,
+    "longitude": -75.555121,
+    "address": "CR 46  CL 80",
+    "progressM": 2516.2
+  },
+  {
+    "id": "sem_186",
+    "latitude": 6.27128,
+    "longitude": -75.555454,
+    "address": "CR 46  CL 78",
+    "progressM": 2702.3
+  },
+  {
+    "id": "sem_185",
+    "latitude": 6.268671,
+    "longitude": -75.55592,
+    "address": "CR 46  CL 73",
+    "progressM": 2990.9
+  },
+  {
+    "id": "sem_184",
+    "latitude": 6.266714,
+    "longitude": -75.556189,
+    "address": "CR 46  CL 71 A",
+    "progressM": 3202.2
+  },
+  {
+    "id": "sem_183",
+    "latitude": 6.264613,
+    "longitude": -75.556237,
+    "address": "CR 46  CL 69",
+    "progressM": 3448.5
+  },
+  {
+    "id": "sem_202",
+    "latitude": 6.263219,
+    "longitude": -75.556562,
+    "address": "CR 47  CL 67",
+    "progressM": 3604.9
+  },
+  {
+    "id": "sem_228",
+    "latitude": 6.257917,
+    "longitude": -75.561,
+    "address": "CR 48  CL 62",
+    "progressM": 4405.1
+  },
+  {
+    "id": "sem_227",
+    "latitude": 6.257248,
+    "longitude": -75.561456,
+    "address": "CR 48  CL 61",
+    "progressM": 4500.1
+  },
+  {
+    "id": "sem_226",
+    "latitude": 6.255844,
+    "longitude": -75.562353,
+    "address": "CR 48  CL 59",
+    "progressM": 4678.2
+  },
+  {
+    "id": "sem_225",
+    "latitude": 6.254996,
+    "longitude": -75.562874,
+    "address": "CR 48  CL 58",
+    "progressM": 4795.0
+  },
+  {
+    "id": "sem_198",
+    "latitude": 6.254476,
+    "longitude": -75.562422,
+    "address": "CR 47  CL 58",
+    "progressM": 4882.8
+  },
+  {
+    "id": "sem_182",
+    "latitude": 6.253331,
+    "longitude": -75.562336,
+    "address": "CR 46  CL 57",
+    "progressM": 5000.7
+  },
+  {
+    "id": "sem_181",
+    "latitude": 6.252675,
+    "longitude": -75.562705,
+    "address": "CR 46  CL 56",
+    "progressM": 5080.3
+  },
+  {
+    "id": "sem_179",
+    "latitude": 6.250524,
+    "longitude": -75.563999,
+    "address": "CR 46  CL 53",
+    "progressM": 5348.6
+  },
+  {
+    "id": "sem_176",
+    "latitude": 6.247522,
+    "longitude": -75.565833,
+    "address": "CR 46  CL 49",
+    "progressM": 5751.5
+  },
+  {
+    "id": "sem_175",
+    "latitude": 6.246728,
+    "longitude": -75.566434,
+    "address": "CR 46  CL 48",
+    "progressM": 5854.3
+  },
+  {
+    "id": "sem_173",
+    "latitude": 6.245471,
+    "longitude": -75.567373,
+    "address": "CR 46  CL 46",
+    "progressM": 6038.4
+  },
+  {
+    "id": "sem_257",
+    "latitude": 6.244355,
+    "longitude": -75.569827,
+    "address": "CR 50  CL 44",
+    "progressM": 6366.5
+  },
+  {
+    "id": "sem_696",
+    "latitude": 6.245541,
+    "longitude": -75.569371,
+    "address": "CR 50  CL 45",
+    "progressM": 6499.9
+  },
+  {
+    "id": "sem_697",
+    "latitude": 6.24545,
+    "longitude": -75.569129,
+    "address": "CR 49  CL 45",
+    "progressM": 6499.9
+  },
+  {
+    "id": "sem_232",
+    "latitude": 6.246706,
+    "longitude": -75.568262,
+    "address": "CR 49  CL 46",
+    "progressM": 6672.8
+  },
+  {
+    "id": "sem_174",
+    "latitude": 6.246168,
+    "longitude": -75.566844,
+    "address": "CR 46  CL 47",
+    "progressM": 6840.3
+  },
+  {
+    "id": "sem_177",
+    "latitude": 6.248352,
+    "longitude": -75.565213,
+    "address": "CR 46  CL 50",
+    "progressM": 7146.9
+  },
+  {
+    "id": "sem_178",
+    "latitude": 6.249122,
+    "longitude": -75.564741,
+    "address": "CR 46  CL 52",
+    "progressM": 7242.5
+  },
+  {
+    "id": "sem_180",
+    "latitude": 6.251308,
+    "longitude": -75.56351,
+    "address": "CR 46  CL 54",
+    "progressM": 7535.9
+  },
+  {
+    "id": "sem_292",
+    "latitude": 6.257103,
+    "longitude": -75.565875,
+    "address": "CR 51  CL 58",
+    "progressM": 8433.8
+  },
+  {
+    "id": "sem_293",
+    "latitude": 6.258107,
+    "longitude": -75.565545,
+    "address": "CR 51  CL 59",
+    "progressM": 8548.2
+  },
+  {
+    "id": "sem_294",
+    "latitude": 6.259311,
+    "longitude": -75.565048,
+    "address": "CR 51  CL 61",
+    "progressM": 8684.4
+  },
+  {
+    "id": "sem_295",
+    "latitude": 6.260404,
+    "longitude": -75.564657,
+    "address": "CR 51  CL 62",
+    "progressM": 8816.1
+  },
+  {
+    "id": "sem_296",
+    "latitude": 6.261416,
+    "longitude": -75.564233,
+    "address": "CR 51  CL 64",
+    "progressM": 8944.2
+  },
+  {
+    "id": "sem_298",
+    "latitude": 6.263338,
+    "longitude": -75.563532,
+    "address": "CR 51  CL 67",
+    "progressM": 9175.2
+  },
+  {
+    "id": "sem_299",
+    "latitude": 6.263899,
+    "longitude": -75.56242,
+    "address": "CR 51  CL 67",
+    "progressM": 9294.3
+  },
+  {
+    "id": "sem_297",
+    "latitude": 6.264501,
+    "longitude": -75.563238,
+    "address": "CR 51  CL 67",
+    "progressM": 9381.2
+  },
+  {
+    "id": "sem_301",
+    "latitude": 6.265406,
+    "longitude": -75.562585,
+    "address": "CR 51  CL 68",
+    "progressM": 9479.2
+  },
+  {
+    "id": "sem_689",
+    "latitude": 6.272494,
+    "longitude": -75.562399,
+    "address": "CR 51  CL 78",
+    "progressM": 10297.4
+  },
+  {
+    "id": "sem_243",
+    "latitude": 6.284547,
+    "longitude": -75.556739,
+    "address": "CR 49 A  CL 93",
+    "progressM": 12398.9
+  },
+  {
+    "id": "sem_190",
+    "latitude": 6.284451,
+    "longitude": -75.553625,
+    "address": "CR 46  CL 93",
+    "progressM": 13239.6
+  }
+]
