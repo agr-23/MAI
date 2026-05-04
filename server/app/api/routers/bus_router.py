@@ -9,10 +9,10 @@ import numpy as np
 router = APIRouter(tags=["paraderos"])
 
 # Read and cast historic data
-historic = pd.read_csv("data/rutas/clean_historycal.csv")
+historic = pd.read_csv("data/rutas/clean_historyc.csv")
 historic["horaregistro"] = pd.to_datetime(historic["horaregistro"])
 
-ruta_coords_rad = np.radians(ruta_df[["lat", "lon"]].values)
+ruta_coords_rad = np.radians(historic[["lat", "lon"]].values)
     
 # Data structure for log(n) geospatial queries
 tree = BallTree(ruta_coords_rad, metric="haversine")
@@ -31,7 +31,7 @@ async def buses_proximos(paradero: paradero):
 
     historic_hour_filtered = historic_hour_filtered[historic_hour_filtered["fecha"] == fecha_most_records]
 
-    coord = np.radians([[paradero.waypoint.latitude, paraderowaypoint.longitude]])
+    coord = np.radians([[paradero.waypoint.latitude, paradero.waypoint.longitude]])
 
     distances, indices = tree.query(coord, k=3)
 
