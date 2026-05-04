@@ -13,6 +13,7 @@ async def fetch_ors_route(
     token: str,
     coords: List[Tuple[float, float]],
     steps: bool,
+    profile:str
 ) -> Dict[str, Any]:
     """Request a route from ORS and return the first (best) feature dict."""
     headers = {"Authorization": token, "Content-Type": "application/json"}

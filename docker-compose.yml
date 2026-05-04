@@ -1,0 +1,12 @@
+services:
+
+  backend:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    container_name: backend
+    env_file:
+      - ./server/.env
+    expose:
+      - "8000"
+    restart: unless-stopped
