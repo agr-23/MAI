@@ -12,7 +12,7 @@ router = APIRouter(tags=["user"])
 paraderos = paraderos_cache
 
 @router.post("/near_paradero")
-async def get_near_paradero(location:coords):
+async def get_near_paradero(location: coords):
     if not paraderos:
         raise HTTPException(status_code=500, detail="Paraderos not found")
 
