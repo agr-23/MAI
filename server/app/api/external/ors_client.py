@@ -8,13 +8,25 @@ from typing import Any, Dict, List, Tuple
 import httpx
 from fastapi import HTTPException
 
+VALID_PROFILES = {
+    "foot-walking",
+    "foot-hiking",
+    "wheelchair",
+    "driving-car",
+    "cycling-regular",
+}
+
 async def fetch_ors_route(
     client: httpx.AsyncClient,
     token: str,
     coords: List[Tuple[float, float]],
     steps: bool,
+    profile: str = "foot-walking",
 ) -> Dict[str, Any]:
     """Request a route from ORS and return the first (best) feature dict."""
+    if profile not in VALID_PROFILES:
+        profile = "foot-walking"
+
     headers = {"Authorization": token, "Content-Type": "application/json"}
 
     payload: Dict[str, Any] = {
@@ -23,7 +35,7 @@ async def fetch_ors_route(
         "geometry": True,
     }
 
-    url = "https://api.openrouteservice.org/v2/directions/driving-car/geojson"
+    url = f"https://api.openrouteservice.org/v2/directions/{profile}/geojson"
     resp = await client.post(url, headers=headers, json=payload)
 
     if resp.status_code >= 400:
