@@ -39,6 +39,7 @@ async def get_near_paradero(location:coords):
                 token=settings.ORS_TOKEN,
                 coords=coords,
                 steps=False,
+                profile=location.profile,
             )
         except httpx.RequestError as exc:
             raise HTTPException(status_code=502, detail=f"ORS network error: {exc!s}")
