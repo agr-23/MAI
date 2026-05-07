@@ -31,13 +31,13 @@ async def get_near_paradero(location: coords):
             destino_lon = paradero["lon"]
 
     # ORS espera coordenadas en orden [lon, lat]
-    coords = [[origen_lon, origen_lat], [destino_lon, destino_lat]]
+    ors_coords = [[origen_lon, origen_lat], [destino_lon, destino_lat]]
     async with httpx.AsyncClient(timeout=30) as client:
         try:
             r = await fetch_ors_route(
                 client=client,
                 token=settings.ORS_TOKEN,
-                coords=coords,
+                coords=ors_coords,
                 steps=False,
                 profile=location.profile,
             )

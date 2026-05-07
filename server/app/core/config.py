@@ -15,10 +15,11 @@ class Settings:
     # External API tokens
     ORS_TOKEN: str = os.getenv("ORS_TOKEN", "")
 
-    # CORS
+    # CORS — configurar ALLOWED_ORIGINS en .env para producción
+    # Apps móviles (Flutter) no envían Origin, así que * es seguro para esta API
     ALLOWED_ORIGINS: list[str] = [
         o.strip()
-        for o in os.getenv("ALLOWED_ORIGINS", "http://localhost:5173").split(",")
+        for o in os.getenv("ALLOWED_ORIGINS", "*").split(",")
     ]
 
     # Server port (informational – used by Dockerfile / uvicorn CLI)

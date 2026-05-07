@@ -26,6 +26,10 @@ async def buses_proximos(paradero: paradero):
     hora_horas = historic["horaregistro"].dt.total_seconds() // 3600
     historic_hour_filtered = historic[hora_horas.between(current_hour - 2, current_hour)]
 
+    # Ampliar ventana si no hay registros en la hora actual (ej. madrugada)
+    if historic_hour_filtered.empty:
+        historic_hour_filtered = historic
+
     fecha_most_records = historic_hour_filtered["fecha"].value_counts().idxmax()
 
     historic_hour_filtered = historic_hour_filtered[historic_hour_filtered["fecha"] == fecha_most_records]
