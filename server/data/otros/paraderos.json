@@ -1,147 +1,137 @@
 [
     {
-        "lat":6.2617462081,
-        "lon":-75.5639489565,
-        "direccion":"CR 51 64-22, Medellin"
+        "lat": 6.2617462081,
+        "lon": -75.5639489565,
+        "direccion": "CR 51 64-22, Medellin"
     },
     {
-        "lat":6.2554444773,
-        "lon":-75.5631879445,
-        "direccion":"CL 58 48-26, Medellin"
+        "lat": 6.2554444773,
+        "lon": -75.5631879445,
+        "direccion": "CL 58 48-26, Medellin"
     },
     {
-        "lat":6.2687087777,
-        "lon":-75.561871355,
-        "direccion":"CR 51 x CL 73, Medellin"
+        "lat": 6.2687087777,
+        "lon": -75.561871355,
+        "direccion": "CR 51 x CL 73, Medellin"
     },
     {
-        "lat":6.2523182283,
-        "lon":-75.5627114284,
-        "direccion":"CR 46 x CL 56  , Medellin"
+        "lat": 6.2523182283,
+        "lon": -75.5627114284,
+        "direccion": "CR 46 x CL 56  , Medellin"
     },
     {
-        "lat":6.2815342731,
-        "lon":-75.5623780999,
-        "direccion":"CR 51B 89-22, Medellin"
+        "lat": 6.2815342731,
+        "lon": -75.5623780999,
+        "direccion": "CR 51B 89-22, Medellin"
     },
     {
-        "lat":6.2738685539,
-        "lon":-75.5623337966,
-        "direccion":"CR 51 79-54, Medellin"
+        "lat": 6.2738685539,
+        "lon": -75.5623337966,
+        "direccion": "CR 51 79-54, Medellin"
     },
     {
-        "lat":6.2718048233,
-        "lon":-75.5621637602,
-        "direccion":"CR 51 x CL 77, Medellin"
+        "lat": 6.2718048233,
+        "lon": -75.5621637602,
+        "direccion": "CR 51 x CL 77, Medellin"
     },
     {
-        "lat":6.266203468,
-        "lon":-75.5620427385,
-        "direccion":"CR 51 68-14, Medellin"
+        "lat": 6.266203468,
+        "lon": -75.5620427385,
+        "direccion": "CR 51 68-14, Medellin"
     },
     {
-        "lat":6.2479133047,
-        "lon":-75.5653193592,
-        "direccion":"CR 46 x CL 49  , Medellin"
+        "lat": 6.2479133047,
+        "lon": -75.5653193592,
+        "direccion": "CR 46 x CL 49  , Medellin"
     },
     {
-        "lat":6.2487214253,
-        "lon":-75.5651514394,
-        "direccion":"CR 46 x CL 50, Medellin"
+        "lat": 6.2487214253,
+        "lon": -75.5651514394,
+        "direccion": "CR 46 x CL 50, Medellin"
     },
     {
-        "lat":6.2588934585,
-        "lon":-75.5651041479,
-        "direccion":"CR 51 60-32, Medellin"
+        "lat": 6.2588934585,
+        "lon": -75.5651041479,
+        "direccion": "CR 51 60-32, Medellin"
     },
     {
-        "lat":6.2828065073,
-        "lon":-75.5607161389,
-        "direccion":"CL 91 50D-49, Medellin"
+        "lat": 6.2828065073,
+        "lon": -75.5607161389,
+        "direccion": "CL 91 50D-49, Medellin"
     },
     {
-        "lat":6.2842801967,
-        "lon":-75.5573381057,
-        "direccion":"CR 49B x CL 92, Medellin"
+        "lat": 6.2842801967,
+        "lon": -75.5573381057,
+        "direccion": "CR 49B x CL 92, Medellin"
     },
     {
-        "lat":6.2831779099,
-        "lon":-75.5546862887,
-        "direccion":"CL 92 46A-07, Medellin"
+        "lat": 6.2831779099,
+        "lon": -75.5546862887,
+        "direccion": "CL 92 46A-07, Medellin"
     },
     {
-        "lat":6.2826466725,
-        "lon":-75.5555971238,
-        "direccion":"CR 48 90-67, Medellin"
+        "lat": 6.2826466725,
+        "lon": -75.5555971238,
+        "direccion": "CR 48 90-67, Medellin"
     },
     {
-        "lat":6.2721611429,
-        "lon":-75.5553942897,
-        "direccion":"CL 79 46-04, Medellin"
+        "lat": 6.2721611429,
+        "lon": -75.5553942897,
+        "direccion": "CL 79 46-04, Medellin"
     },
     {
-        "lat":6.2604381487,
-        "lon":-75.559539118,
-        "direccion":"CR 48 63A-123, Medellin"
+        "lat": 6.2604381487,
+        "lon": -75.559539118,
+        "direccion": "CR 48 63A-123, Medellin"
     },
     {
-        "lat":6.283293049,
-        "lon":-75.5576166383,
-        "direccion":"CL 92 49B-23, Medellin"
+        "lat": 6.283293049,
+        "lon": -75.5576166383,
+        "direccion": "CL 92 49B-23, Medellin"
     },
     {
-        "lat":6.2859372053,
-        "lon":-75.5500060906,
-        "direccion":"CR 42B 94-57, Medellin"
+        "lat": 6.2859372053,
+        "lon": -75.5500060906,
+        "direccion": "CR 42B 94-57, Medellin"
     },
     {
-        "lat":6.2837487368,
-        "lon":-75.5535671212,
-        "direccion":"CR 46 92-54, Medellin"
+        "lat": 6.2837487368,
+        "lon": -75.5535671212,
+        "direccion": "CR 46 92-54, Medellin"
     },
     {
-        "lat":6.284661815,
-        "lon":-75.5527433775,
-        "direccion":"CR 45A x CL 93, Medellin"
+        "lat": 6.2784342382,
+        "lon": -75.5628970751,
+        "direccion": "CL 85 51B-11, Medellin"
     },
     {
-        "lat":6.2784342382,
-        "lon":-75.5628970751,
-        "direccion":"CL 85 51B-11, Medellin"
+        "lat": 6.2774808169,
+        "lon": -75.5635825539,
+        "direccion": "CL 82B 51-166, Medellin"
     },
     {
-        "lat":6.2774808169,
-        "lon":-75.5635825539,
-        "direccion":"CL 82B 51-166, Medellin"
+        "lat": 6.2649032038,
+        "lon": -75.5627004698,
+        "direccion": "CR 51 67-96, Medellin"
     },
     {
-        "lat":6.2649032038,
-        "lon":-75.5627004698,
-        "direccion":"CR 51 67-96, Medellin"
+        "lat": 6.2846095391,
+        "lon": -75.552690657,
+        "direccion": "CR 45A x CL 93, Medellin"
     },
     {
-        "lat":6.2858883016,
-        "lon":-75.5499021472,
-        "direccion":"CR 42B 94-44, Medellin"
+        "lat": 6.2761587663,
+        "lon": -75.5518904646,
+        "direccion": "CR 43A 84-14, Medellin"
     },
     {
-        "lat":6.2846095391,
-        "lon":-75.552690657,
-        "direccion":"CR 45A x CL 93, Medellin"
+        "lat": 6.2457730302,
+        "lon": -75.567320096,
+        "direccion": "CR 46 x CL 45, Medellin"
     },
     {
-        "lat":6.2761587663,
-        "lon":-75.5518904646,
-        "direccion":"CR 43A 84-14, Medellin"
-    },
-    {
-        "lat":6.2457730302,
-        "lon":-75.567320096,
-        "direccion":"CR 46 x CL 45, Medellin"
-    },
-    {
-        "lat":6.2517566051,
-        "lon":-75.5634383718,
-        "direccion":"CL 55 54-75, Medellin"
+        "lat": 6.2517566051,
+        "lon": -75.5634383718,
+        "direccion": "CL 55 54-75, Medellin"
     }
 ]
